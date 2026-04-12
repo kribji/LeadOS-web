@@ -7,21 +7,21 @@ const steps = [
   {
     num: "01",
     title: "Drop your website",
-    body: "Paste your URL and LeadOS reads your site instantly — understanding what you sell, who buys it, and how you sound.",
+    body: "Drop your URL, LeadOS reads your site and works out exactly what you do and who you sell to.",
     expand:
-      "No forms to fill. No ICP workshop. Just your website. LeadOS extracts your product, your buyer, your tone, and your value proposition automatically.",
+      "No long ICP forms to fill out or profiles to make. LeadOS reads your website and extracts your product, your buyer, your tone, and your value proposition automatically.",
   },
   {
     num: "02",
     title: "Agent finds leads",
-    body: "LeadOS scans the web for companies showing buying signals that match your profile — scored and ranked by fit.",
+    body: "LeadOS scans the web for companies showing buying signals that match your profile, deliveres them scored and ranked by fit to you.",
     expand:
       "The agent searches across job boards, news, company websites and databases. Every lead is scored against your ICP and comes with a reason explaining exactly why it's a match.",
   },
   {
     num: "03",
     title: "Send in seconds",
-    body: "Every lead comes with a personalised email draft. Human-in-the-loop — you approve before anything is sent.",
+    body: "Each lead gets a personalised email written for them. Nothing sends without your say-so.",
     expand:
       "Claude writes each email referencing the lead's specific signals and website content. Edit the tone, tweak the copy, or send as-is. You stay in control of every outreach.",
   },

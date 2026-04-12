@@ -7,7 +7,7 @@ const cards = [
   {
     icon: TrendingUp,
     title: "Company is scaling",
-    body: "New hires, new offices, new markets — growth creates new needs",
+    body: "When a company grows, their needs change. That's your opening",
   },
   {
     icon: Users,
@@ -22,7 +22,7 @@ const cards = [
   {
     icon: Search,
     title: "Actively evaluating",
-    body: "Companies researching solutions — before they've decided on one",
+    body: "Catch them while they're still deciding.",
   },
 ];
 
@@ -47,8 +47,7 @@ export default function SignalsStrip() {
             At the moment they&apos;re most likely to say yes.
           </h2>
           <p className="text-[#7a9ab0] text-base max-w-2xl">
-            Not cold lists. Not random databases. Companies actively showing
-            signs they need what you sell — right now.
+            Forget cold lists and random databases. These are real companies actively looking for what you sell.
           </p>
         </motion.div>
 

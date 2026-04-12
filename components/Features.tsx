@@ -17,7 +17,7 @@ const cards = [
     title: "Website intelligence",
     body: "LeadOS reads each lead's website in real time so your outreach feels researched, not templated.",
     expand:
-      "We scrape the lead's homepage, about page, and careers page. Claude extracts what they're building, who they're hiring, and what challenges they're facing — then weaves it into your outreach draft.",
+      "We scrape the lead's homepage, about page, and careers page. Claude extracts what they're building, who they're hiring, and what challenges they're facing and then weaves it into your outreach draft.",
   },
   {
     icon: PenLine,
@@ -93,7 +93,7 @@ export default function Features() {
           </h2>
           <p className="text-[#7a9ab0] text-lg mt-5 max-w-2xl mx-auto">
             Every lead comes with the context you need to close. Signal, score,
-            website insight, and outreach draft — all in one place.
+            website insight, and outreach draft, all in one place.
           </p>
         </motion.div>
 

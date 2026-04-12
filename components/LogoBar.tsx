@@ -3,7 +3,7 @@ export default function LogoBar() {
     <section className="border-y border-[#0e1822] py-16 bg-[#040810]">
       <div className="max-w-7xl mx-auto px-12 flex items-center justify-center gap-16 flex-wrap">
         <div className="text-center">
-          <p className="text-[#dce8f0] text-3xl font-light">3 min</p>
+          <p className="text-[#dce8f0] text-3xl font-light">5 min</p>
           <p className="text-[#4a6272] text-xs uppercase tracking-wider mt-1">
             to set up
           </p>
