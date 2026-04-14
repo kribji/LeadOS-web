@@ -14,8 +14,8 @@ export default function Home() {
   return (
     <main className="bg-[#040810]">
       <Nav />
-      <DemoSection />
       <Hero />
+      <DemoSection />
       <LogoBar />
       <SignalsStrip />
       <HowItWorks />
