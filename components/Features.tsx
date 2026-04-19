@@ -34,7 +34,7 @@ function FeatureCard({ card, delay }: { card: (typeof cards)[0]; delay: number }
 
   return (
     <motion.div
-      className="bg-[#040810] border border-[#152232] rounded-md px-8 py-10 hover:border-[#00d4aa]/20 transition-all duration-300"
+      className="bg-[#040810] border border-[#152232] rounded-md px-4 py-8 md:px-8 md:py-10 hover:border-[#00d4aa]/20 transition-all duration-300"
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut", delay }}
@@ -70,8 +70,11 @@ function FeatureCard({ card, delay }: { card: (typeof cards)[0]; delay: number }
 
 export default function Features() {
   return (
-    <section id="features" className="bg-[#0e1822] border-y border-[#152232] py-36">
-      <div className="max-w-7xl mx-auto px-12">
+    <section
+      id="features"
+      className="bg-[#0e1822] border-y border-[#152232] py-20 md:py-36"
+    >
+      <div className="max-w-7xl mx-auto px-4 md:px-12">
         <motion.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: 32 }}

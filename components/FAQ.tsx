@@ -73,7 +73,10 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-32 max-w-4xl mx-auto px-12">
+    <section
+      id="faq"
+      className="py-20 md:py-32 max-w-4xl mx-auto px-4 md:px-12"
+    >
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0, y: 32 }}

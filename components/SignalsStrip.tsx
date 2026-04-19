@@ -35,8 +35,8 @@ const fadeUp = {
 
 export default function SignalsStrip() {
   return (
-    <section className="border-y border-[#0e1822] py-20 bg-[#040810]">
-      <div className="max-w-7xl mx-auto px-12">
+    <section className="border-y border-[#0e1822] py-16 md:py-20 bg-[#040810]">
+      <div className="max-w-7xl mx-auto px-4 md:px-12">
         <motion.div className="mb-14" {...fadeUp}>
           <p className="text-[#4a6272] text-xs uppercase tracking-[0.2em] mb-4">
             THE LEADOS DIFFERENCE

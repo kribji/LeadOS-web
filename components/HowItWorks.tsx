@@ -77,7 +77,10 @@ function Step({
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-36 max-w-7xl mx-auto px-12">
+    <section
+      id="how-it-works"
+      className="py-20 md:py-36 max-w-7xl mx-auto px-4 md:px-12"
+    >
       <motion.div
         className="mb-24"
         initial={{ opacity: 0, y: 32 }}

@@ -24,7 +24,7 @@ export default function Nav() {
       }`}
       style={{ height: "58px" }}
     >
-      <div className="max-w-7xl mx-auto px-12 h-full flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-12 h-full flex items-center justify-between min-w-0">
         {/* Logo */}
         <span className="font-bold tracking-widest text-sm select-none">
           <span className="text-[#dce8f0]">LEAD</span>

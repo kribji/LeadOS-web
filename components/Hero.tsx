@@ -19,14 +19,6 @@ const lines = [
   [headline[5], headline[6]],
 ];
 
-const avatars = [
-  { initials: "KR" },
-  { initials: "MJ" },
-  { initials: "AS" },
-  { initials: "PL" },
-  { initials: "TW" },
-];
-
 export default function Hero() {
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -35,10 +27,10 @@ export default function Hero() {
   let wordIndex = 0;
 
   return (
-    <section className="py-32 max-w-7xl mx-auto px-12 relative">
-      <div className="flex flex-col lg:flex-row lg:items-center gap-16 lg:gap-0">
-        {/* Left column */}
-        <div className="lg:w-3/5">
+    <section className="py-20 md:py-32 max-w-7xl mx-auto px-4 md:px-12 relative">
+      <div className="flex flex-col md:flex-row md:items-center gap-16 md:gap-0">
+        {/* Left column — centered on mobile, left-aligned from md up */}
+        <div className="w-full md:w-3/5 text-center md:text-left flex flex-col items-center md:items-start">
           {/* Word-by-word headline */}
           <h1
             style={{
@@ -75,17 +67,17 @@ export default function Hero() {
           </h1>
 
           {/* Thin teal line */}
-          <div className="w-40 h-px bg-[#00d4aa] opacity-30 mt-3 mb-10" />
+          <div className="w-40 h-px bg-[#00d4aa] opacity-30 mt-3 mb-10 mx-auto md:mx-0" />
 
           {/* Subheadline */}
-          <p className="text-[#7a9ab0] text-lg leading-relaxed max-w-xl mb-10">
+          <p className="text-[#7a9ab0] text-lg leading-relaxed max-w-xl mb-10 mx-auto md:mx-0">
             LeadOS reads buying signals across the web and finds the decision
             makers most likely to need you right now. For any business. Any
             product. Any industry.
           </p>
 
           {/* CTA buttons */}
-          <div className="flex flex-wrap gap-4 items-center">
+          <div className="flex flex-col md:flex-row flex-wrap gap-4 items-center justify-center md:justify-start w-full md:w-auto">
             <button
               onClick={() => scrollTo("waitlist")}
               className="bg-[#00d4aa] text-[#040810] font-medium text-base px-8 py-3.5 rounded-md hover:bg-[#00a888] transition-colors duration-200"
@@ -99,29 +91,10 @@ export default function Hero() {
               See how it works ↓
             </button>
           </div>
-
-          {/* Social proof */}
-          <div className="mt-10 flex items-center gap-3">
-            <div className="flex items-center">
-              {avatars.map((a, i) => (
-                <div
-                  key={i}
-                  className={`w-8 h-8 rounded-full bg-[#002820] border border-[#00422e] text-[#00d4aa] text-xs font-medium flex items-center justify-center ${
-                    i !== 0 ? "-ml-2" : ""
-                  }`}
-                >
-                  {a.initials}
-                </div>
-              ))}
-            </div>
-            <p className="text-[#4a6272] text-sm">
-              200+ sales teams on the waitlist
-            </p>
-          </div>
         </div>
 
         {/* Right column — floating score rings */}
-        <div className="hidden lg:flex lg:w-2/5 relative h-[360px] items-center justify-center">
+        <div className="hidden md:flex md:w-2/5 relative h-[360px] items-center justify-center">
           {/* Ring 1 — largest, top right */}
           <div className="float-1 absolute top-0 right-4">
             <svg width="200" height="200" viewBox="0 0 200 200">

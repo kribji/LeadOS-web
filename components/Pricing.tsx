@@ -78,7 +78,10 @@ export default function Pricing() {
   const [annual, setAnnual] = useState(false);
 
   return (
-    <section id="pricing" className="py-36 max-w-7xl mx-auto px-12">
+    <section
+      id="pricing"
+      className="py-20 md:py-36 max-w-7xl mx-auto px-4 md:px-12 overflow-x-hidden"
+    >
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0, y: 32 }}
@@ -103,7 +106,7 @@ export default function Pricing() {
         </p>
 
         {/* Annual toggle */}
-        <div className="flex items-center justify-center gap-3 mt-10 mb-0">
+        <div className="flex flex-wrap items-center justify-center gap-3 mt-10 mb-0 max-w-full">
           <span className="text-[#7a9ab0] text-sm">Monthly</span>
 
           <button
@@ -141,7 +144,7 @@ export default function Pricing() {
         </div>
       </motion.div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-7xl mx-auto min-w-0">
         {plans.map((plan, i) => {
           const price = annual ? plan.annualPrice : plan.monthlyPrice;
           const isCustom = price === "Custom";
@@ -149,7 +152,7 @@ export default function Pricing() {
           return (
             <motion.div
               key={i}
-              className={`rounded-lg px-8 py-10 relative flex flex-col ${
+              className={`rounded-lg px-4 py-8 md:px-8 md:py-10 relative flex flex-col min-w-0 ${
                 plan.featured
                   ? "bg-[#002820] border-2 border-[#00d4aa]"
                   : "bg-[#0e1822] border border-[#152232]"

@@ -15,9 +15,12 @@ export default function Waitlist() {
   };
 
   return (
-    <section id="waitlist" className="py-36 px-12 bg-[#040810]">
+    <section
+      id="waitlist"
+      className="py-20 md:py-36 px-4 md:px-12 bg-[#040810] overflow-x-hidden"
+    >
       <motion.div
-        className="max-w-2xl mx-auto text-center bg-[#002820] border border-[#00422e] rounded-lg px-12 py-16"
+        className="max-w-2xl mx-auto text-center bg-[#002820] border border-[#00422e] rounded-lg px-4 py-12 sm:px-8 md:px-12 md:py-16 w-full min-w-0"
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
@@ -41,9 +44,9 @@ export default function Waitlist() {
         </p>
 
         {/* Counter */}
-        <div className="inline-flex items-center gap-2 mb-10 mt-4">
-          <span className="w-2 h-2 rounded-full bg-[#00d4aa] animate-pulse" />
-          <span className="text-[#00d4aa] text-sm font-medium">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-10 mt-4 text-center px-1">
+          <span className="w-2 h-2 rounded-full bg-[#00d4aa] animate-pulse flex-shrink-0" />
+          <span className="text-[#00d4aa] text-sm font-medium leading-snug">
             🔥 7 of 10 founding spots remaining
           </span>
         </div>
@@ -54,18 +57,21 @@ export default function Waitlist() {
             ✓ You&apos;re on the list! We&apos;ll be in touch soon.
           </p>
         ) : (
-          <form onSubmit={handleSubmit} className="flex gap-3 max-w-md mx-auto">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col sm:flex-row gap-3 w-full max-w-md mx-auto"
+          >
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your@email.com"
               required
-              className="flex-1 bg-[#040810] border border-[#152232] rounded-md px-5 py-3.5 text-[#dce8f0] text-sm placeholder:text-[#4a6272] focus:border-[#00d4aa] focus:outline-none transition-colors duration-200"
+              className="w-full min-w-0 flex-1 bg-[#040810] border border-[#152232] rounded-md px-5 py-3.5 text-[#dce8f0] text-sm placeholder:text-[#4a6272] focus:border-[#00d4aa] focus:outline-none transition-colors duration-200"
             />
             <button
               type="submit"
-              className="bg-[#00d4aa] text-[#040810] font-medium px-6 py-3.5 rounded-md hover:bg-[#00a888] transition-colors duration-200 whitespace-nowrap text-sm"
+              className="w-full sm:w-auto shrink-0 bg-[#00d4aa] text-[#040810] font-medium px-6 py-3.5 rounded-md hover:bg-[#00a888] transition-colors duration-200 whitespace-nowrap text-sm"
             >
               Join the founding team →
             </button>
