@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import EnterpriseContactModal from "@/components/EnterpriseContactModal";
 
 const plans = [
   {
@@ -70,12 +71,12 @@ const plans = [
     ],
     featured: false,
     enterprise: true,
-    checkoutUrl: "mailto:hello@leados.tech?subject=LeadOS%20Enterprise%20Enquiry",
   },
 ];
 
 export default function Pricing() {
   const [annual, setAnnual] = useState(false);
+  const [enterpriseModalOpen, setEnterpriseModalOpen] = useState(false);
 
   return (
     <section
@@ -215,14 +216,13 @@ export default function Pricing() {
                   Get started
                 </a>
               ) : plan.enterprise ? (
-                <a
-                  href={plan.checkoutUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={() => setEnterpriseModalOpen(true)}
                   className="block w-full py-3 rounded-md border border-[#00d4aa] text-[#00d4aa] text-sm font-medium text-center hover:bg-[#002820] transition-colors duration-200"
                 >
                   Contact us
-                </a>
+                </button>
               ) : (
                 <a
                   href={plan.checkoutUrl}
@@ -250,6 +250,11 @@ export default function Pricing() {
           </span>
         ))}
       </div>
+
+      <EnterpriseContactModal
+        open={enterpriseModalOpen}
+        onClose={() => setEnterpriseModalOpen(false)}
+      />
     </section>
   );
 }

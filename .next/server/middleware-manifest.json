@@ -1,6 +1,34 @@
 {
   "version": 3,
   "middleware": {},
-  "functions": {},
+  "functions": {
+    "/api/extract-config/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/app/api/extract-config/route.js"
+      ],
+      "name": "app/api/extract-config/route",
+      "page": "/api/extract-config/route",
+      "matchers": [
+        {
+          "regexp": "^/api/extract\\-config$",
+          "originalSource": "/api/extract-config"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "5DN0cs2XSiXx2TtTqEhj5",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "xmWJna8KVeh+a0fdqQxyTepk83WUbeL54K2n9YcFV9Y=",
+        "__NEXT_PREVIEW_MODE_ID": "d8446e8e7031e1f31425bee88f44d8fe",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "bf122ea476dcba2e0d5813ea50fcc1454a49c351b0eedd75ff2589261a336917",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "f8e58136549dee2c168190df637744c2764f7d1c21439226beb05338719303cc"
+      }
+    }
+  },
   "sortedMiddleware": []
 }
