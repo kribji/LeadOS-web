@@ -2,29 +2,7 @@
 
 import { motion } from "framer-motion";
 import { TrendingUp, Users, Clock, Search } from "lucide-react";
-
-const cards = [
-  {
-    icon: TrendingUp,
-    title: "Company is scaling",
-    body: "When a company grows, their needs change. That's your opening",
-  },
-  {
-    icon: Users,
-    title: "Leadership just changed",
-    body: "New decision makers re-evaluate everything in their first 90 days",
-  },
-  {
-    icon: Clock,
-    title: "Budget cycle is open",
-    body: "The right timing turns a cold call into a warm conversation",
-  },
-  {
-    icon: Search,
-    title: "Actively evaluating",
-    body: "Catch them while they're still deciding.",
-  },
-];
+import { useLanguage } from "@/components/LanguageContext";
 
 const fadeUp = {
   initial: { opacity: 0, y: 32 },
@@ -34,20 +12,60 @@ const fadeUp = {
 };
 
 export default function SignalsStrip() {
+  const { language } = useLanguage();
+  const cards = [
+    {
+      icon: TrendingUp,
+      title: language === "no" ? "Selskapet vokser" : "Company is scaling",
+      body:
+        language === "no"
+          ? "Når et selskap vokser, endrer behovene seg. Det er åpningen din."
+          : "When a company grows, their needs change. That's your opening",
+    },
+    {
+      icon: Users,
+      title: language === "no" ? "Ny ledelse" : "Leadership just changed",
+      body:
+        language === "no"
+          ? "Nye beslutningstakere vurderer alt på nytt i løpet av de første 90 dagene."
+          : "New decision makers re-evaluate everything in their first 90 days",
+    },
+    {
+      icon: Clock,
+      title: language === "no" ? "Budsjettvindu åpent" : "Budget cycle is open",
+      body:
+        language === "no"
+          ? "Riktig timing gjør en kald henvendelse til en varm samtale."
+          : "The right timing turns a cold call into a warm conversation",
+    },
+    {
+      icon: Search,
+      title: language === "no" ? "Aktiv vurdering" : "Actively evaluating",
+      body:
+        language === "no"
+          ? "Ta dem mens de fortsatt vurderer."
+          : "Catch them while they're still deciding.",
+    },
+  ];
+
   return (
     <section className="border-y border-[#0e1822] py-16 md:py-20 bg-[#040810]">
       <div className="max-w-7xl mx-auto px-4 md:px-12">
         <motion.div className="mb-14" {...fadeUp}>
           <p className="text-[#4a6272] text-xs uppercase tracking-[0.2em] mb-4">
-            THE LEADOS DIFFERENCE
+            {language === "no" ? "LEADOS-FORDELEN" : "THE LEADOS DIFFERENCE"}
           </p>
           <h2 className="text-[#dce8f0] font-light text-3xl mb-4">
-            We find the decision maker.
+            {language === "no" ? "Vi finner beslutningstakeren." : "We find the decision maker."}
             <br />
-            At the moment they&apos;re most likely to say yes.
+            {language === "no"
+              ? "I øyeblikket de mest sannsynlig sier ja."
+              : "At the moment they&apos;re most likely to say yes."}
           </h2>
           <p className="text-[#7a9ab0] text-base max-w-2xl">
-            Forget cold lists and random databases. These are real companies actively looking for what you sell.
+            {language === "no"
+              ? "Glem kalde lister og tilfeldige databaser. Dette er ekte selskaper som aktivt ser etter det du selger."
+              : "Forget cold lists and random databases. These are real companies actively looking for what you sell."}
           </p>
         </motion.div>
 

@@ -3,80 +3,119 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import EnterpriseContactModal from "@/components/EnterpriseContactModal";
-
-const plans = [
-  {
-    name: "Solo",
-    monthlyPrice: "$49",
-    annualPrice: "$39",
-    priceSuffix: "/month",
-    features: [
-      "1 user",
-      "50 leads / month",
-      "3 agent runs / month",
-      "AI outreach drafts",
-      "Verified email enrichment",
-      "Email support",
-    ],
-    featured: false,
-    enterprise: false,
-    checkoutUrl: "https://leados.lemonsqueezy.com/checkout/buy/5ea24798-b23c-4736-8149-460f292de664",
-  },
-  {
-    name: "Pro",
-    monthlyPrice: "$149",
-    annualPrice: "$119",
-    priceSuffix: "/month",
-    features: [
-      "Up to 3 users",
-      "300 leads / month",
-      "Unlimited agent runs",
-      "Verified email + phone enrichment",
-      "AI reply analysis",
-      "Priority support",
-    ],
-    featured: true,
-    badge: "Most popular",
-    enterprise: false,
-    checkoutUrl: "https://leados.lemonsqueezy.com/checkout/buy/4df0348e-f825-4d5f-9176-a14bbf6806f6",
-  },
-  {
-    name: "Team",
-    monthlyPrice: "$299",
-    annualPrice: "$239",
-    priceSuffix: "/month",
-    features: [
-      "Up to 10 users",
-      "1,000 leads / month",
-      "Everything in Pro",
-      "Onboarding call",
-    ],
-    featured: false,
-    enterprise: false,
-    checkoutUrl: "https://leados.lemonsqueezy.com/checkout/buy/1248b228-29ab-4bb4-9d4c-d87598139114",
-  },
-  {
-    name: "Enterprise",
-    monthlyPrice: "Custom",
-    annualPrice: "Custom",
-    priceSuffix: "pricing",
-    features: [
-      "Unlimited users",
-      "Unlimited leads",
-      "Everything in Team",
-      "CRM integrations",
-      "API access",
-      "Dedicated account manager",
-      "Custom contract + SLA",
-    ],
-    featured: false,
-    enterprise: true,
-  },
-];
+import { useLanguage } from "@/components/LanguageContext";
 
 export default function Pricing() {
+  const { language } = useLanguage();
   const [annual, setAnnual] = useState(false);
   const [enterpriseModalOpen, setEnterpriseModalOpen] = useState(false);
+  const plans = [
+    {
+      name: "Solo",
+      monthlyPrice: "$49",
+      annualPrice: "$39",
+      priceSuffix: language === "no" ? "/måned" : "/month",
+      features:
+        language === "no"
+          ? [
+              "3 agent-kjøringer / måned",
+              "Opptil 50 leads",
+              "AI outreach-utkast",
+              "E-postberikelse",
+            ]
+          : [
+              "3 agent runs / month",
+              "Up to 50 leads",
+              "AI outreach drafts",
+              "Email enrichment",
+            ],
+      featured: false,
+      enterprise: false,
+      checkoutUrl:
+        "https://leados.lemonsqueezy.com/checkout/buy/595b34b2-38c6-4831-8f7a-c18383635fdc",
+    },
+    {
+      name: "Pro",
+      monthlyPrice: "$149",
+      annualPrice: "$119",
+      priceSuffix: language === "no" ? "/måned" : "/month",
+      features:
+        language === "no"
+          ? [
+              "30 agent-kjøringer / måned",
+              "Opptil 300 leads",
+              "Alt i Solo",
+              "Telefonberikelse",
+              "AI svaranalyse",
+              "Prioritert support",
+            ]
+          : [
+              "30 agent runs / month",
+              "Up to 300 leads",
+              "Everything in Solo",
+              "Phone enrichment",
+              "AI reply analysis",
+              "Priority support",
+            ],
+      featured: true,
+      badge: language === "no" ? "Mest populær" : "Most popular",
+      enterprise: false,
+      checkoutUrl:
+        "https://leados.lemonsqueezy.com/checkout/buy/c9ace6ca-19da-4088-a584-2e688934001e",
+    },
+    {
+      name: language === "no" ? "Premium" : "Premium",
+      monthlyPrice: "$299",
+      annualPrice: "$239",
+      priceSuffix: language === "no" ? "/måned" : "/month",
+      features:
+        language === "no"
+          ? [
+              "100 agent-kjøringer / måned",
+              "Opptil 1 000 leads",
+              "Alt i Pro",
+              "Onboarding-samtale",
+            ]
+          : [
+              "100 agent runs / month",
+              "Up to 1,000 leads",
+              "Everything in Pro",
+              "Onboarding call",
+            ],
+      featured: false,
+      enterprise: false,
+      checkoutUrl:
+        "https://leados.lemonsqueezy.com/checkout/buy/c60091ff-6057-4ede-b037-a349fe310b60",
+    },
+    {
+      name: "Enterprise",
+      monthlyPrice: language === "no" ? "Tilpasset" : "Custom",
+      annualPrice: language === "no" ? "Tilpasset" : "Custom",
+      priceSuffix: language === "no" ? "pris" : "pricing",
+      features:
+        language === "no"
+          ? [
+              "Ubegrensede brukere",
+              "Ubegrensede leads",
+              "Alt i Premium",
+              "CRM-integrasjoner",
+              "API-tilgang",
+              "Dedikert kundekontakt",
+              "Tilpasset avtale + SLA",
+            ]
+          : [
+              "Unlimited users",
+              "Unlimited leads",
+              "Everything in Premium",
+              "CRM integrations",
+              "API access",
+              "Dedicated account manager",
+              "Custom contract + SLA",
+            ],
+      featured: false,
+      enterprise: true,
+    },
+  ];
 
   return (
     <section
@@ -91,7 +130,7 @@ export default function Pricing() {
         viewport={{ once: true }}
       >
         <p className="text-[#4a6272] text-xs uppercase tracking-[0.2em] mb-5">
-          PRICING
+          {language === "no" ? "PRISER" : "PRICING"}
         </p>
         <h2
           style={{
@@ -100,15 +139,19 @@ export default function Pricing() {
             color: "#dce8f0",
           }}
         >
-          Simple pricing.
+          {language === "no" ? "Enkle priser." : "Simple pricing."}
         </h2>
         <p className="text-[#7a9ab0] text-base mt-4">
-          14-day money back guarantee if LeadOS doesn&apos;t deliver.
+          {language === "no"
+            ? "14 dagers pengene-tilbake-garanti hvis LeadOS ikke leverer."
+            : "14-day money back guarantee if LeadOS doesn&apos;t deliver."}
         </p>
 
         {/* Annual toggle */}
         <div className="flex flex-wrap items-center justify-center gap-3 mt-10 mb-0 max-w-full">
-          <span className="text-[#7a9ab0] text-sm">Monthly</span>
+          <span className="text-[#7a9ab0] text-sm">
+            {language === "no" ? "Månedlig" : "Monthly"}
+          </span>
 
           <button
             onClick={() => setAnnual((v) => !v)}
@@ -137,9 +180,11 @@ export default function Pricing() {
           </button>
 
           <div className="flex items-center gap-1.5">
-            <span className="text-[#7a9ab0] text-sm">Annual</span>
+            <span className="text-[#7a9ab0] text-sm">
+              {language === "no" ? "Årlig" : "Annual"}
+            </span>
             <span className="bg-[#002820] border border-[#00422e] text-[#00d4aa] text-xs px-2 py-0.5 rounded-full">
-              Save 20%
+              {language === "no" ? "Spar 20%" : "Save 20%"}
             </span>
           </div>
         </div>
@@ -148,7 +193,7 @@ export default function Pricing() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-7xl mx-auto min-w-0">
         {plans.map((plan, i) => {
           const price = annual ? plan.annualPrice : plan.monthlyPrice;
-          const isCustom = price === "Custom";
+          const isCustom = price === "Custom" || price === "Tilpasset";
 
           return (
             <motion.div
@@ -186,13 +231,15 @@ export default function Pricing() {
                 )}
                 {isCustom && (
                   <span className="text-[#4a6272] text-sm">
-                    pricing
+                    {language === "no" ? "pris" : "pricing"}
                   </span>
                 )}
               </div>
 
               {annual && !isCustom && (
-                <p className="text-[#4a6272] text-xs mt-1">billed annually</p>
+                <p className="text-[#4a6272] text-xs mt-1">
+                  {language === "no" ? "faktureres årlig" : "billed annually"}
+                </p>
               )}
 
               <div className="border-t border-[#152232] my-6" />
@@ -213,7 +260,7 @@ export default function Pricing() {
                   rel="noopener noreferrer"
                   className="block bg-[#00d4aa] text-[#040810] font-medium w-full py-3 rounded-md hover:bg-[#00a888] transition-colors duration-200 text-sm text-center"
                 >
-                  Get started
+                  {language === "no" ? "Kom i gang" : "Get started"}
                 </a>
               ) : plan.enterprise ? (
                 <button
@@ -221,7 +268,7 @@ export default function Pricing() {
                   onClick={() => setEnterpriseModalOpen(true)}
                   className="block w-full py-3 rounded-md border border-[#00d4aa] text-[#00d4aa] text-sm font-medium text-center hover:bg-[#002820] transition-colors duration-200"
                 >
-                  Contact us
+                  {language === "no" ? "Kontakt oss" : "Contact us"}
                 </button>
               ) : (
                 <a
@@ -230,7 +277,7 @@ export default function Pricing() {
                   rel="noopener noreferrer"
                   className="block w-full py-3 rounded-md border border-[#152232] text-[#7a9ab0] text-sm font-medium text-center hover:border-[#00d4aa] hover:text-[#dce8f0] transition-all duration-200"
                 >
-                  Get started
+                  {language === "no" ? "Kom i gang" : "Get started"}
                 </a>
               )}
             </motion.div>
@@ -241,8 +288,10 @@ export default function Pricing() {
       {/* Trust signals */}
       <div className="flex justify-center gap-8 mt-10 flex-wrap">
         {[
-          "14-day money back guarantee",
-          "Cancel any time",
+          language === "no"
+            ? "14 dagers pengene-tilbake-garanti"
+            : "14-day money back guarantee",
+          language === "no" ? "Avslutt når som helst" : "Cancel any time",
         ].map((signal) => (
           <span key={signal} className="text-[#4a6272] text-sm flex items-center gap-1.5">
             <span className="text-[#00d4aa]">✓</span>

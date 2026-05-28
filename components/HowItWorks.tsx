@@ -2,37 +2,21 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const steps = [
-  {
-    num: "01",
-    title: "Drop your website",
-    body: "Drop your URL, LeadOS reads your site and works out exactly what you do and who you sell to.",
-    expand:
-      "No long ICP forms to fill out or profiles to make. LeadOS reads your website and extracts your product, your buyer, your tone, and your value proposition automatically.",
-  },
-  {
-    num: "02",
-    title: "Agent finds leads",
-    body: "LeadOS scans the web for companies showing buying signals that match your profile, deliveres them scored and ranked by fit to you.",
-    expand:
-      "The agent searches across job boards, news, company websites and databases. Every lead is scored against your ICP and comes with a reason explaining exactly why it's a match.",
-  },
-  {
-    num: "03",
-    title: "Send in seconds",
-    body: "Each lead gets a personalised email written for them. Nothing sends without your say-so.",
-    expand:
-      "Claude writes each email referencing the lead's specific signals and website content. Edit the tone, tweak the copy, or send as-is. You stay in control of every outreach.",
-  },
-];
+import { useLanguage } from "@/components/LanguageContext";
 
 function Step({
   step,
   delay,
+  language,
 }: {
-  step: (typeof steps)[0];
+  step: {
+    num: string;
+    title: string;
+    body: string;
+    expand: string;
+  };
   delay: number;
+  language: "en" | "no";
 }) {
   const [open, setOpen] = useState(false);
 
@@ -69,13 +53,59 @@ function Step({
         onClick={() => setOpen((v) => !v)}
         className="text-[#4a6272] text-xs hover:text-[#00d4aa] transition-colors duration-200 cursor-pointer"
       >
-        {open ? "Show less ↑" : "Read more →"}
+        {open
+          ? language === "no"
+            ? "Vis mindre ↑"
+            : "Show less ↑"
+          : language === "no"
+          ? "Les mer →"
+          : "Read more →"}
       </button>
     </motion.div>
   );
 }
 
 export default function HowItWorks() {
+  const { language } = useLanguage();
+  const steps = [
+    {
+      num: "01",
+      title: language === "no" ? "Legg inn nettstedet ditt" : "Drop your website",
+      body:
+        language === "no"
+          ? "Legg inn URL-en din, så leser LeadOS nettstedet og finner ut nøyaktig hva du selger og til hvem."
+          : "Drop your URL, LeadOS reads your site and works out exactly what you do and who you sell to.",
+      expand:
+        language === "no"
+          ? "Ingen lange ICP-skjemaer å fylle ut. LeadOS leser nettstedet ditt og henter automatisk ut produktet ditt, kjøperen din, tonen din og verdiforslaget ditt."
+          : "No long ICP forms to fill out or profiles to make. LeadOS reads your website and extracts your product, your buyer, your tone, and your value proposition automatically.",
+    },
+    {
+      num: "02",
+      title: language === "no" ? "Agenten finner leads" : "Agent finds leads",
+      body:
+        language === "no"
+          ? "LeadOS skanner nettet etter selskaper med kjøpssignaler som matcher profilen din, og leverer dem scoret og rangert etter match."
+          : "LeadOS scans the web for companies showing buying signals that match your profile, deliveres them scored and ranked by fit to you.",
+      expand:
+        language === "no"
+          ? "Agenten søker på tvers av jobbannonser, nyheter, selskapsnettsider og databaser. Hvert lead scores mot ICP-en din og kommer med en tydelig begrunnelse."
+          : "The agent searches across job boards, news, company websites and databases. Every lead is scored against your ICP and comes with a reason explaining exactly why it's a match.",
+    },
+    {
+      num: "03",
+      title: language === "no" ? "Send på sekunder" : "Send in seconds",
+      body:
+        language === "no"
+          ? "Hvert lead får en personlig e-post skrevet for seg. Ingenting sendes uten at du godkjenner det."
+          : "Each lead gets a personalised email written for them. Nothing sends without your say-so.",
+      expand:
+        language === "no"
+          ? "Claude skriver hver e-post med konkrete signaler og innhold fra nettsiden. Du kan redigere, regenerere eller sende som den er."
+          : "Claude writes each email referencing the lead's specific signals and website content. Edit the tone, tweak the copy, or send as-is. You stay in control of every outreach.",
+    },
+  ];
+
   return (
     <section
       id="how-it-works"
@@ -89,7 +119,7 @@ export default function HowItWorks() {
         viewport={{ once: true }}
       >
         <p className="text-[#00d4aa] text-xs tracking-[0.2em] uppercase mb-5">
-          HOW IT WORKS
+          {language === "no" ? "SLIK FUNGERER DET" : "HOW IT WORKS"}
         </p>
         <h2
           style={{
@@ -98,15 +128,15 @@ export default function HowItWorks() {
             color: "#dce8f0",
           }}
         >
-          Set up in 5 minutes.
+          {language === "no" ? "Kom i gang på 5 minutter." : "Set up in 5 minutes."}
           <br />
-          Leads every morning.
+          {language === "no" ? "Nye leads hver morgen." : "Leads every morning."}
         </h2>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
         {steps.map((step, i) => (
-          <Step key={i} step={step} delay={i * 0.15} />
+          <Step key={i} step={step} delay={i * 0.15} language={language} />
         ))}
       </div>
     </section>

@@ -1,3 +1,5 @@
+"use client";
+
 import Nav from "@/components/Nav";
 import DemoSection from "@/components/DemoSection";
 import Hero from "@/components/Hero";

@@ -1,28 +1,46 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const headline = [
-  { text: "Your", teal: false },
-  { text: "next", teal: false },
-  { text: "customer", teal: false },
-  { text: "is", teal: false },
-  { text: "already", teal: false },
-  { text: "showing", teal: true },
-  { text: "signs.", teal: true },
-];
-
-// Group into lines for rendering
-const lines = [
-  [headline[0], headline[1], headline[2]],
-  [headline[3], headline[4]],
-  [headline[5], headline[6]],
-];
+import { useLanguage } from "@/components/LanguageContext";
 
 export default function Hero() {
+  const { language } = useLanguage();
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const headline =
+    language === "no"
+      ? [
+          { text: "Din", teal: false },
+          { text: "neste", teal: false },
+          { text: "kunde", teal: false },
+          { text: "viser", teal: false },
+          { text: "allerede", teal: false },
+          { text: "tegn.", teal: true },
+        ]
+      : [
+          { text: "Your", teal: false },
+          { text: "next", teal: false },
+          { text: "customer", teal: false },
+          { text: "is", teal: false },
+          { text: "already", teal: false },
+          { text: "showing", teal: true },
+          { text: "signs.", teal: true },
+        ];
+
+  const lines =
+    language === "no"
+      ? [
+          [headline[0], headline[1], headline[2]],
+          [headline[3], headline[4]],
+          [headline[5]],
+        ]
+      : [
+          [headline[0], headline[1], headline[2]],
+          [headline[3], headline[4]],
+          [headline[5], headline[6]],
+        ];
 
   let wordIndex = 0;
 
@@ -71,9 +89,9 @@ export default function Hero() {
 
           {/* Subheadline */}
           <p className="text-[#7a9ab0] text-lg leading-relaxed max-w-xl mb-10 mx-auto md:mx-0">
-            LeadOS reads buying signals across the web and finds the decision
-            makers most likely to need you right now. For any business. Any
-            product. Any industry.
+            {language === "no"
+              ? "LeadOS leser kjøpssignaler på tvers av nettet og finner beslutningstakerne som mest sannsynlig trenger deg akkurat nå. For alle typer bedrifter. Alle produkter. Alle bransjer."
+              : "LeadOS reads buying signals across the web and finds the decision makers most likely to need you right now. For any business. Any product. Any industry."}
           </p>
 
           {/* CTA buttons */}
@@ -82,13 +100,13 @@ export default function Hero() {
               onClick={() => scrollTo("waitlist")}
               className="bg-[#00d4aa] text-[#040810] font-medium text-base px-8 py-3.5 rounded-md hover:bg-[#00a888] transition-colors duration-200"
             >
-              Join the waitlist →
+              {language === "no" ? "Bli med på ventelisten →" : "Join the waitlist →"}
             </button>
             <button
               onClick={() => scrollTo("how-it-works")}
               className="text-[#4a6272] text-sm hover:text-[#7a9ab0] transition-colors duration-200"
             >
-              See how it works ↓
+              {language === "no" ? "Se hvordan det fungerer ↓" : "See how it works ↓"}
             </button>
           </div>
         </div>
