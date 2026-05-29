@@ -1,10 +1,23 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { Copy } from "lucide-react";
 import { useLanguage } from "@/components/LanguageContext";
+
+const DISCOUNT_CODE = "C1OTGW0A";
 
 export default function Waitlist() {
   const { language } = useLanguage();
+  const [codeRevealed, setCodeRevealed] = useState(false);
+
+  const copyCode = async () => {
+    try {
+      await navigator.clipboard.writeText(DISCOUNT_CODE);
+    } catch {
+      // ignore
+    }
+  };
 
   return (
     <section
@@ -48,9 +61,31 @@ export default function Waitlist() {
           </span>
         </div>
 
-        <p className="text-[#00d4aa] font-mono text-sm">
-          Bruk kode C1OTGW0A i kassen
-        </p>
+        {!codeRevealed ? (
+          <button
+            type="button"
+            onClick={() => setCodeRevealed(true)}
+            className="inline-block bg-[#00d4aa] text-[#040810] font-medium px-8 py-3.5 rounded-md hover:bg-[#00a888] transition-colors duration-200 text-sm"
+          >
+            {language === "no"
+              ? "Sikre grunnleggertilbudet"
+              : "Claim your founding offer"}
+          </button>
+        ) : (
+          <div className="flex items-center justify-center gap-2">
+            <p className="text-[#00d4aa] font-mono text-sm">
+              Bruk kode {DISCOUNT_CODE} i kassen
+            </p>
+            <button
+              type="button"
+              onClick={copyCode}
+              aria-label="Copy discount code"
+              className="text-[#00d4aa] hover:text-[#00a888] transition-colors duration-200 p-1"
+            >
+              <Copy size={16} />
+            </button>
+          </div>
+        )}
 
         <div className="flex gap-2 justify-center flex-wrap mt-6">
           {[
