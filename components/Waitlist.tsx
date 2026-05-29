@@ -48,12 +48,9 @@ export default function Waitlist() {
           </span>
         </div>
 
-        <a
-          href="https://leados.lemonsqueezy.com/checkout/buy/c9ace6ca-19da-4088-a584-2e688934001e?discount=C1OTGWOA"
-          className="inline-block bg-[#00d4aa] text-[#040810] font-medium px-8 py-3.5 rounded-md hover:bg-[#00a888] transition-colors duration-200 text-sm"
-        >
-          {language === "no" ? "Sikre plassen din" : "Claim your spot"}
-        </a>
+        <p className="text-[#00d4aa] font-mono text-sm">
+          Bruk kode C1OTGW0A i kassen
+        </p>
 
         <div className="flex gap-2 justify-center flex-wrap mt-6">
           {[
