@@ -96,12 +96,14 @@ export default function Hero() {
 
           {/* CTA buttons */}
           <div className="flex flex-col md:flex-row flex-wrap gap-4 items-center justify-center md:justify-start w-full md:w-auto">
-            <button
-              onClick={() => scrollTo("waitlist")}
+            <a
+              href="https://leados.lemonsqueezy.com/checkout/buy/c9ace6ca-19da-4088-a584-2e688934001e?discount=C1OTGWOA"
               className="bg-[#00d4aa] text-[#040810] font-medium text-base px-8 py-3.5 rounded-md hover:bg-[#00a888] transition-colors duration-200"
             >
-              {language === "no" ? "Bli med på ventelisten →" : "Join the waitlist →"}
-            </button>
+              {language === "no"
+                ? "Sikre grunnleggertilbudet"
+                : "Claim your founding offer"}
+            </a>
             <button
               onClick={() => scrollTo("how-it-works")}
               className="text-[#4a6272] text-sm hover:text-[#7a9ab0] transition-colors duration-200"
