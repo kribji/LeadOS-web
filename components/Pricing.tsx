@@ -12,19 +12,19 @@ export default function Pricing() {
   const plans = [
     {
       name: "Solo",
-      monthlyPrice: "$49",
-      annualPrice: "$39",
+      monthlyPrice: "$79",
+      annualPrice: "$63",
       priceSuffix: language === "no" ? "/måned" : "/month",
       features:
         language === "no"
           ? [
-              "3 agent-kjøringer / måned",
+              "5 agent-kjøringer / måned",
               "Opptil 50 leads",
               "AI outreach-utkast",
               "E-postberikelse",
             ]
           : [
-              "3 agent runs / month",
+              "5 agent runs / month",
               "Up to 50 leads",
               "AI outreach drafts",
               "Email enrichment",
@@ -36,8 +36,8 @@ export default function Pricing() {
     },
     {
       name: "Pro",
-      monthlyPrice: "$149",
-      annualPrice: "$119",
+      monthlyPrice: "$199",
+      annualPrice: "$159",
       priceSuffix: language === "no" ? "/måned" : "/month",
       features:
         language === "no"
@@ -65,8 +65,8 @@ export default function Pricing() {
     },
     {
       name: language === "no" ? "Premium" : "Premium",
-      monthlyPrice: "$299",
-      annualPrice: "$239",
+      monthlyPrice: "$349",
+      annualPrice: "$279",
       priceSuffix: language === "no" ? "/måned" : "/month",
       features:
         language === "no"

@@ -60,7 +60,7 @@ export default function SignalsStrip() {
             <br />
             {language === "no"
               ? "I øyeblikket de mest sannsynlig sier ja."
-              : "At the moment they&apos;re most likely to say yes."}
+              : "At the moment they are the most likely to say yes."}
           </h2>
           <p className="text-[#7a9ab0] text-base max-w-2xl">
             {language === "no"

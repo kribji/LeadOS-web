@@ -48,8 +48,8 @@ export default function Waitlist() {
             : "The first 10 customers get 40% off for life —"}
           <br />
           {language === "no"
-            ? "på alle planer, for alltid. Fra $39/mnd."
-            : "on any plan, forever. Starting from $39/mo."}
+            ? "på alle planer, for alltid."
+            : "on any plan, forever."}
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-10 mt-4 text-center px-1">
@@ -87,21 +87,7 @@ export default function Waitlist() {
           </div>
         )}
 
-        <div className="flex gap-2 justify-center flex-wrap mt-6">
-          {[
-            language === "no" ? "Solo fra $49/mnd" : "Solo from $49/mo",
-            language === "no" ? "Pro fra $149/mnd" : "Pro from $149/mo",
-            language === "no" ? "Premium fra $299/mnd" : "Premium from $299/mo",
-          ].map((pill) => (
-            <span
-              key={pill}
-              className="bg-[#002820] border border-[#00422e] rounded-full px-3 py-1 text-[10px] text-[#00d4aa] font-medium"
-            >
-              {pill}
-            </span>
-          ))}
-        </div>
-        <p className="text-[#4a6272] text-[10px] mt-2 text-center">
+        <p className="text-[#4a6272] text-[10px] mt-6 text-center">
           {language === "no"
             ? "Spar 20% med årlig fakturering"
             : "Save 20% with annual billing"}
