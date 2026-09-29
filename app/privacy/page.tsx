@@ -72,7 +72,7 @@ export default function PrivacyPage() {
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <li style={{ color: muted, display: 'flex', gap: '8px' }}><span style={{ color: teal }}>·</span>IP address and browser/device information</li>
               <li style={{ color: muted, display: 'flex', gap: '8px' }}><span style={{ color: teal }}>·</span>Pages visited and features used (analytics)</li>
-              <li style={{ color: muted, display: 'flex', gap: '8px' }}><span style={{ color: teal }}>·</span>Cookie identifiers (see Section 9)</li>
+              <li style={{ color: muted, display: 'flex', gap: '8px' }}><span style={{ color: teal }}>·</span>Cookie identifiers (see Section 10)</li>
             </ul>
           </section>
 
@@ -188,15 +188,47 @@ export default function PrivacyPage() {
 
           {/* 7 */}
           <section>
-            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>7 — Automated Decision-Making</h2>
+            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>7 — Data About Your Leads and Prospects</h2>
+            <p style={{ color: muted, marginBottom: '16px' }}>
+              When you use LeadOS to discover and enrich potential business contacts (&quot;leads&quot;), we process personal data about individuals who are not our direct customers — for example, a company&apos;s business development manager or sales director. This section explains how we handle that data.
+            </p>
+            <p style={{ color: bright, fontWeight: 500, marginBottom: '8px' }}>What we collect</p>
+            <p style={{ color: muted, marginBottom: '16px' }}>
+              For each lead, we may process: name, business email address, phone number, job title, employer, and publicly available business information (e.g. from LinkedIn, company websites, or public business registries such as Br&oslash;nn&oslash;ysundregistrene). We do not knowingly collect personal data unrelated to a person&apos;s professional role.
+            </p>
+            <p style={{ color: bright, fontWeight: 500, marginBottom: '8px' }}>Where this data comes from</p>
+            <p style={{ color: muted, marginBottom: '16px' }}>
+              We do not collect this data directly from the individual. It is sourced from publicly available web content and third-party enrichment providers (see Section 5) based on criteria you configure (your Ideal Customer Profile).
+            </p>
+            <p style={{ color: bright, fontWeight: 500, marginBottom: '8px' }}>Our legal basis</p>
+            <p style={{ color: muted, marginBottom: '16px' }}>
+              We process lead data on the basis of legitimate interest (GDPR Art. 6(1)(f)) — specifically, facilitating lawful B2B sales prospecting on behalf of our customers, which is a recognised legitimate interest under GDPR Recital 47. We only process business contact information reasonably necessary for this purpose, and we do not process this data for any purpose beyond enabling our customers&apos; outreach.
+            </p>
+            <p style={{ color: bright, fontWeight: 500, marginBottom: '8px' }}>Notice to leads</p>
+            <p style={{ color: muted, marginBottom: '16px' }}>
+              Because we collect this data indirectly rather than from the individual, GDPR Article 14 requires that affected individuals be informed. We rely on our customers to include a clear, easy way to opt out in their first outreach communication, and our outreach-generation features are designed to support this.
+            </p>
+            <p style={{ color: bright, fontWeight: 500, marginBottom: '8px' }}>Your rights if you are a lead</p>
+            <p style={{ color: muted, marginBottom: '16px' }}>
+              If you have received outreach generated using LeadOS and believe your data has been processed, you have the same rights described in Section 11 of this policy (access, rectification, erasure, objection, and others). To exercise these rights regarding data processed on behalf of one of our customers, you may contact us directly at <a href="mailto:hello@leados.tech" style={{ color: teal }}>hello@leados.tech</a>, or contact the business that reached out to you, who acts as the independent data controller for their own outreach activities (see Section 6 of our Terms of Service).
+            </p>
+            <p style={{ color: bright, fontWeight: 500, marginBottom: '8px' }}>Objecting to processing</p>
             <p style={{ color: muted }}>
-              LeadOS uses AI (Claude by Anthropic) to automatically score leads based on your ICP configuration. This constitutes automated processing under GDPR Article 22. However, this scoring is not a legally or similarly significant decision — it is an advisory ranking to help you prioritise outreach. You retain full control and can override or ignore any score. No leads are contacted without your explicit approval.
+              You have the right to object at any time to processing based on legitimate interest, including for prospecting purposes. If you object, we will stop processing your data for this purpose unless we can demonstrate compelling legitimate grounds that override your interests, or the processing is necessary for legal claims.
             </p>
           </section>
 
           {/* 8 */}
           <section>
-            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>8 — Data Retention</h2>
+            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>8 — Automated Decision-Making</h2>
+            <p style={{ color: muted }}>
+              LeadOS uses AI (Claude by Anthropic) to automatically score leads based on your ICP configuration. This constitutes automated processing under GDPR Article 22. However, this scoring is not a legally or similarly significant decision — it is an advisory ranking to help you prioritise outreach. You retain full control and can override or ignore any score. No leads are contacted without your explicit approval.
+            </p>
+          </section>
+
+          {/* 9 */}
+          <section>
+            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>9 — Data Retention</h2>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li style={{ color: muted, display: 'flex', gap: '8px' }}><span style={{ color: teal }}>·</span><span><strong style={{ color: bright }}>Account data</strong> — retained for the duration of your subscription and deleted within 30 days of account deletion.</span></li>
               <li style={{ color: muted, display: 'flex', gap: '8px' }}><span style={{ color: teal }}>·</span><span><strong style={{ color: bright }}>Lead data</strong> — retained for the duration of your subscription and deleted within 30 days of account deletion.</span></li>
@@ -206,9 +238,9 @@ export default function PrivacyPage() {
             </ul>
           </section>
 
-          {/* 9 */}
+          {/* 10 */}
           <section>
-            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>9 — Cookies</h2>
+            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>10 — Cookies</h2>
             <div style={{ overflowX: 'auto', marginBottom: '16px' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
                 <thead>
@@ -240,9 +272,9 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          {/* 10 */}
+          {/* 11 */}
           <section>
-            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>10 — Your Rights Under GDPR</h2>
+            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>11 — Your Rights Under GDPR</h2>
             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 20px 0', display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li style={{ color: muted, display: 'flex', gap: '8px' }}><span style={{ color: teal }}>·</span><span><strong style={{ color: bright }}>Right of access (Art. 15)</strong> — request a copy of all data we hold about you.</span></li>
               <li style={{ color: muted, display: 'flex', gap: '8px' }}><span style={{ color: teal }}>·</span><span><strong style={{ color: bright }}>Right to rectification (Art. 16)</strong> — request correction of inaccurate data.</span></li>
@@ -257,9 +289,9 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          {/* 11 */}
+          {/* 12 */}
           <section>
-            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>11 — Data Security</h2>
+            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>12 — Data Security</h2>
             <p style={{ color: muted, marginBottom: '16px' }}>We implement appropriate technical and organisational measures to protect your data including:</p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <li style={{ color: muted, display: 'flex', gap: '8px' }}><span style={{ color: teal }}>·</span>Encrypted data storage (Supabase with encryption at rest)</li>
@@ -270,25 +302,25 @@ export default function PrivacyPage() {
             </ul>
           </section>
 
-          {/* 12 */}
+          {/* 13 */}
           <section>
-            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>12 — Children&apos;s Privacy</h2>
+            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>13 — Children&apos;s Privacy</h2>
             <p style={{ color: muted }}>
               LeadOS is a B2B service intended for business use only. We do not knowingly collect data from anyone under the age of 18.
             </p>
           </section>
 
-          {/* 13 */}
+          {/* 14 */}
           <section>
-            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>13 — Changes to This Policy</h2>
+            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>14 — Changes to This Policy</h2>
             <p style={{ color: muted }}>
               We may update this Privacy Policy from time to time. We will notify you by email at least 14 days before any material changes take effect. Continued use of the service after that date constitutes acceptance of the updated policy.
             </p>
           </section>
 
-          {/* 14 */}
+          {/* 15 */}
           <section>
-            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>14 — Complaints</h2>
+            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>15 — Complaints</h2>
             <p style={{ color: muted, marginBottom: '16px' }}>
               If you believe we are processing your data unlawfully, you have the right to lodge a complaint with the Norwegian data protection authority:
             </p>
@@ -300,9 +332,9 @@ export default function PrivacyPage() {
             </div>
           </section>
 
-          {/* 15 */}
+          {/* 16 */}
           <section>
-            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>15 — Contact</h2>
+            <h2 style={{ color: teal, fontSize: '15px', fontWeight: 500, marginBottom: '16px' }}>16 — Contact</h2>
             <p style={{ color: muted }}>
               For any privacy-related questions or to exercise your rights: <a href="mailto:hello@leados.tech" style={{ color: teal }}>hello@leados.tech</a>
             </p>
