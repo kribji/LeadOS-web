@@ -173,12 +173,6 @@ export default function PrivacyPage() {
                     <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>USA</td>
                     <td style={{ color: muted, padding: '12px 0', verticalAlign: 'top' }}>Standard Contractual Clauses (SCCs)</td>
                   </tr>
-                  <tr style={{ borderBottom: `1px solid ${border}` }}>
-                    <td style={{ color: bright, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Contentsquare (formerly Hotjar)</td>
-                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Website analytics</td>
-                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>EU/USA (per account configuration)</td>
-                    <td style={{ color: muted, padding: '12px 0', verticalAlign: 'top' }}>Standard Contractual Clauses (SCCs)</td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -238,17 +232,11 @@ export default function PrivacyPage() {
                     <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Strictly necessary</td>
                     <td style={{ color: muted, padding: '12px 0', verticalAlign: 'top' }}>1 year</td>
                   </tr>
-                  <tr style={{ borderBottom: `1px solid ${border}` }}>
-                    <td style={{ color: bright, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Contentsquare (formerly Hotjar)</td>
-                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>User behaviour analytics</td>
-                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Analytics (requires consent)</td>
-                    <td style={{ color: muted, padding: '12px 0', verticalAlign: 'top' }}>1 year</td>
-                  </tr>
                 </tbody>
               </table>
             </div>
             <p style={{ color: muted }}>
-              You can withdraw consent for non-essential cookies at any time by clicking &quot;Cookie settings&quot; in the footer.
+              We do not currently use non-essential or analytics cookies. If this changes, we will update this policy and request your consent before any such cookies are set.
             </p>
           </section>
 
