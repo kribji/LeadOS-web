@@ -23,7 +23,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p style={{ color: muted, fontSize: '14px' }}>
-            Effective date: April 10, 2026 &nbsp;|&nbsp; Last updated: April 10, 2026
+            Effective date: April 10, 2026 &nbsp;|&nbsp; Last updated: September 29, 2026
           </p>
         </div>
 
@@ -139,8 +139,44 @@ export default function PrivacyPage() {
                   </tr>
                   <tr style={{ borderBottom: `1px solid ${border}` }}>
                     <td style={{ color: bright, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Apollo.io</td>
-                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Contact enrichment (email, phone, LinkedIn)</td>
+                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Contact enrichment (email, phone, LinkedIn) — secondary / conditional; used for non-Norway markets only</td>
                     <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>USA</td>
+                    <td style={{ color: muted, padding: '12px 0', verticalAlign: 'top' }}>Standard Contractual Clauses (SCCs)</td>
+                  </tr>
+                  <tr style={{ borderBottom: `1px solid ${border}` }}>
+                    <td style={{ color: bright, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>FullEnrich</td>
+                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Contact enrichment (name, domain, LinkedIn → email/phone)</td>
+                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>USA</td>
+                    <td style={{ color: muted, padding: '12px 0', verticalAlign: 'top' }}>Standard Contractual Clauses (SCCs)</td>
+                  </tr>
+                  <tr style={{ borderBottom: `1px solid ${border}` }}>
+                    <td style={{ color: bright, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Hunter.io</td>
+                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Email finding and verification (name, domain)</td>
+                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>USA</td>
+                    <td style={{ color: muted, padding: '12px 0', verticalAlign: 'top' }}>Standard Contractual Clauses (SCCs)</td>
+                  </tr>
+                  <tr style={{ borderBottom: `1px solid ${border}` }}>
+                    <td style={{ color: bright, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Prospeo</td>
+                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Email lookup (name, company, domain, LinkedIn)</td>
+                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>USA</td>
+                    <td style={{ color: muted, padding: '12px 0', verticalAlign: 'top' }}>Standard Contractual Clauses (SCCs)</td>
+                  </tr>
+                  <tr style={{ borderBottom: `1px solid ${border}` }}>
+                    <td style={{ color: bright, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Brreg</td>
+                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Norwegian company registry (company name/org number → director name)</td>
+                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Norway</td>
+                    <td style={{ color: muted, padding: '12px 0', verticalAlign: 'top' }}>Public government data</td>
+                  </tr>
+                  <tr style={{ borderBottom: `1px solid ${border}` }}>
+                    <td style={{ color: bright, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Resend</td>
+                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Transactional and summary emails (user and lead data)</td>
+                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>USA</td>
+                    <td style={{ color: muted, padding: '12px 0', verticalAlign: 'top' }}>Standard Contractual Clauses (SCCs)</td>
+                  </tr>
+                  <tr style={{ borderBottom: `1px solid ${border}` }}>
+                    <td style={{ color: bright, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Contentsquare (formerly Hotjar)</td>
+                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Website analytics</td>
+                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>EU/USA (per account configuration)</td>
                     <td style={{ color: muted, padding: '12px 0', verticalAlign: 'top' }}>Standard Contractual Clauses (SCCs)</td>
                   </tr>
                 </tbody>
@@ -203,7 +239,7 @@ export default function PrivacyPage() {
                     <td style={{ color: muted, padding: '12px 0', verticalAlign: 'top' }}>1 year</td>
                   </tr>
                   <tr style={{ borderBottom: `1px solid ${border}` }}>
-                    <td style={{ color: bright, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Hotjar</td>
+                    <td style={{ color: bright, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Contentsquare (formerly Hotjar)</td>
                     <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>User behaviour analytics</td>
                     <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Analytics (requires consent)</td>
                     <td style={{ color: muted, padding: '12px 0', verticalAlign: 'top' }}>1 year</td>
