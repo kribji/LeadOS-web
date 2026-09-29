@@ -122,7 +122,7 @@ export default function PrivacyPage() {
                   <tr style={{ borderBottom: `1px solid ${border}` }}>
                     <td style={{ color: bright, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Vercel</td>
                     <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>Application hosting and edge delivery</td>
-                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>USA/EU</td>
+                    <td style={{ color: muted, padding: '12px 16px 12px 0', verticalAlign: 'top' }}>USA (Washington D.C. — iad1 region)</td>
                     <td style={{ color: muted, padding: '12px 0', verticalAlign: 'top' }}>Standard Contractual Clauses (SCCs)</td>
                   </tr>
                   <tr style={{ borderBottom: `1px solid ${border}` }}>
