@@ -24,7 +24,7 @@ export default function TermsPage() {
           Terms of Service
         </h1>
         <p style={{ color: muted, fontSize: '14px', marginBottom: '48px' }}>
-          Effective date: April 10, 2026 | Last updated: April 10, 2026
+          Effective date: April 10, 2026 | Last updated: September 29, 2026
         </p>
 
         <hr style={hr} />
@@ -96,6 +96,9 @@ export default function TermsPage() {
           <li>Use the Service on behalf of a direct competitor to LeadOS</li>
         </ul>
         <p style={{ ...p, marginTop: '12px' }}>
+          If you are sending outreach to individuals in Norway, note that markedsf&oslash;ringsloven &sect; 15 generally prohibits unsolicited electronic marketing to a named individual (e.g. navn@firma.no) without their prior consent. This restriction does not apply to generic company addresses (e.g. post@firma.no). You are responsible for ensuring your outreach complies with this and any other applicable law in your jurisdiction, as set out in Section 5 of these Terms.
+        </p>
+        <p style={{ ...p, marginTop: '12px' }}>
           You are solely responsible for ensuring your outreach activities comply with all applicable laws in your jurisdiction and the jurisdiction of your recipients.
         </p>
 
@@ -157,7 +160,7 @@ export default function TermsPage() {
 
         <h2 style={heading}>11 — Third-Party Services</h2>
         <p style={p}>
-          The Service integrates with third-party providers including Anthropic, Supabase, Serper, Apollo, and Lemonsqueezy. We are not responsible for the availability, accuracy, or conduct of these third-party services. Their use is governed by their own terms of service.
+          The Service integrates with third-party providers including Anthropic, Supabase, Serper, Apollo, FullEnrich, Hunter.io, Prospeo, Brreg, Resend, LemonSqueezy, and Contentsquare. We are not responsible for the availability, accuracy, or conduct of these third-party services. Their use is governed by their own terms of service.
         </p>
 
         <hr style={hr} />
