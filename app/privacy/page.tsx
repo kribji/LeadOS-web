@@ -23,7 +23,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p style={{ color: muted, fontSize: '14px' }}>
-            Effective date: April 10, 2026 &nbsp;|&nbsp; Last updated: September 29, 2026
+            Effective date: April 10, 2026 &nbsp;|&nbsp; Last updated: 8 October 2026
           </p>
         </div>
 
@@ -213,8 +213,12 @@ export default function PrivacyPage() {
               If you have received outreach generated using LeadOS and believe your data has been processed, you have the same rights described in Section 11 of this policy (access, rectification, erasure, objection, and others). To exercise these rights regarding data processed on behalf of one of our customers, you may contact us directly at <a href="mailto:hello@leados.tech" style={{ color: teal }}>hello@leados.tech</a>, or contact the business that reached out to you, who acts as the independent data controller for their own outreach activities (see Section 6 of our Terms of Service).
             </p>
             <p style={{ color: bright, fontWeight: 500, marginBottom: '8px' }}>Objecting to processing</p>
-            <p style={{ color: muted }}>
+            <p style={{ color: muted, marginBottom: '16px' }}>
               You have the right to object at any time to processing based on legitimate interest, including for prospecting purposes. If you object, we will stop processing your data for this purpose unless we can demonstrate compelling legitimate grounds that override your interests, or the processing is necessary for legal claims.
+            </p>
+            <p style={{ color: bright, fontWeight: 500, marginBottom: '8px' }}>Lookup.</p>
+            <p style={{ color: muted }}>
+              When you use Lookup, we search publicly available professional information (name, job title, employer, public profile link, business email address and business phone number) about the person you search for. We retrieve it from third-party data providers and web search, listed in Section 5. Results are shown only to you. They are not saved to your account unless you choose &quot;Save as lead&quot;, and we keep a record of how many lookups you run per day (your user ID and a timestamp, without the search content). The legal basis and the opt-out process are the same as described above for lead data. People can ask us to remove their details at <a href="mailto:hello@leados.tech" style={{ color: teal }}>hello@leados.tech</a>.
             </p>
           </section>
 
